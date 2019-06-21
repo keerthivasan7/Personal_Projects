@@ -1,0 +1,689 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cads.Nalpeiron.DotNet</name>
+    </assembly>
+    <members>
+        <member name="M:Cads.Nalpeiron.DotNet.AgilityConditionSet.#ctor(System.Collections.Generic.List{Cads.Nalpeiron.DotNet.AgilityCondition},System.String)">
+            <summary>
+            AgilityConditionSet constructor
+            </summary>
+            <param name="conditions"></param>
+            <param name="messageOnFailed">The message to used if the conditions are failed.</param>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.Feature.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="codeNormal">Feature code for the normal license</param>
+            <param name="codeFloating">Feature code for the floating license</param>
+            <param name="name">Name of the feature</param>
+            <param name="codeAnalytics">Feature code exclusively for analytics; set to null if not available </param>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.Feature.NoAnalytics">
+            <summary>
+            Whether to log the analytics or not based on TAA field "NoAnalytics"
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.Feature.ProtectionCheck">
+            <summary>
+            Current protection check object
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.Feature.LogAnalyticsStart">
+            <summary>
+            Starts the feature analytics log
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.Feature.LogAnalyticsEnd">
+            <summary>
+            Ends the feature analytics log
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.Feature.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:Cads.Nalpeiron.DotNet.FeatureEqualityComparer">
+            <inheritdoc />
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.FeatureEqualityComparer.Equals(Cads.Nalpeiron.DotNet.Feature,Cads.Nalpeiron.DotNet.Feature)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.FeatureEqualityComparer.GetHashCode(Cads.Nalpeiron.DotNet.Feature)">
+            <inheritdoc />
+        </member>
+        <member name="T:Cads.Nalpeiron.DotNet.FeatureSet">
+            <summary>
+            Representation of an application
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.FeatureSet.#ctor(System.String,System.Collections.Generic.List{Cads.Nalpeiron.DotNet.Feature},System.String,Cads.Nalpeiron.DotNet.AgilityConditionSet)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="name">Name of the feature set</param>
+            <param name="features">Features of the application</param>
+            <param name="cacheFolderPath">Cache folder to used</param>
+            <param name="agilityConditionSet">Agility field condition</param>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.FeatureSet.Name">
+            <summary>
+            This name will be displayed in the user interface to manage the license. 
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.FeatureSet.Features">
+            <summary>
+            List of features
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.FeatureSet.CacheFolderPath">
+            <summary>
+            The path of the Nalpeiron cache folder
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.FeatureSet.AgilityConditionSet">
+            <summary>
+            Set of the agility condition to verify and validate
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.FeatureSet.ToString">
+            <inheritdoc />
+        </member>
+        <member name="T:Cads.Nalpeiron.DotNet.IniFileHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Cads.Nalpeiron.DotNet.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.Properties.Resources.Error">
+            <summary>
+              Looks up a localized string similar to Error.
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.Properties.Resources.LicensecodeToReturnMsg">
+            <summary>
+              Looks up a localized string similar to Licensecode is required to return the license.
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.Properties.Resources.NetworkError">
+            <summary>
+              Looks up a localized string similar to Network Error.
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.Properties.Resources.Privacy">
+            <summary>
+              Looks up a localized string similar to Privacy.
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.Properties.Resources.PrivacySettingOptionMsg">
+            <summary>
+              Looks up a localized string similar to You are not currently participating in our product improvement program, participate in the direction of future versions of our products by clicking Yes, below.
+            </summary>
+        </member>
+        <member name="T:Cads.Nalpeiron.DotNet.ProtectionCheck">
+            <inheritdoc />
+            <summary>
+            Protection Check tools
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.ProtectionCheck._productCategoryId">
+            <summary>
+            User the last 5 digit of product id given in Nalpeiron licensing system,
+            excluding leading zeros if there are any, i.e.
+            6563300100 becomes  100  and 1234567890 becomes  67890 .
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.#ctor(System.Int32,System.String,System.String,System.Version,Cads.Nalpeiron.DotNet.FeatureSet,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            Initialisation
+            </summary>
+            <param name="appEdition">Application edition name</param>
+            <param name="featureSet">Set of features for the application</param>
+            <param name="allowAnalytics">Whether to logging analytics or not</param>
+            <param name="autoRefresh">Whether to refresh license status automatically or not</param>
+            <param name="productCategoryId">Id of the Cads product for which the licensing will be checked</param>
+            <param name="integrationDllx86Path">Path of the integration dll for the x86 platform</param>
+            <param name="integrationDllx64Path">Path of the integration dll for the x86 platform</param>        
+            <param name="appVersion">Version of the application</param>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.CreateLockFile">
+            <summary>
+            Creates a lock files for the license code to lock the retrun of 
+            the floating license until the last instance has been closed.
+            The same lock file has been used to verify whether the RPD has been used or not.
+            If the RPD has been used, it will not allow to create any further instance/s.
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.Name">
+            <summary>
+            Name of the product / application / feature set 
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.ErrorCode">
+            <summary>
+            Error code
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.ErrorMessage">
+            <summary>
+            Error message based on the error code
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.BadImageFormat">
+            <summary>
+            Whether the ingration dll is a right one or not for the current platform (i.e. x86 / x64)
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.LicenseStatus">
+            <summary>
+            License status
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.IsLicenseActive">
+            <summary>
+            Whether the license is active or not
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.LicenseType">
+            <summary>
+            License type (i.e Trial, Permanent, subscription, etc)
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.ActivationType">
+            <summary>
+             Activation type (i.e. online, offline, etc.)
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.LicenseCode">
+            <summary>
+            License code used to activate the license
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.IsLicenseCodeInvalid">
+            <summary>
+            Whether license code valid or not
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.TrialExpiresInSecs">
+            <summary>
+            Number of seconds to expire the trial
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.TrialExpiryDate">
+            <summary>
+            Due date to expire the trial
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.SubscriptionExpiresInSecs">
+            <summary>
+            Number of seconds to expire the subscription
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.SubscriptionExpiryDate">
+            <summary>
+            Due date to expire the subscription
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.LeaseExpiresInSecs">
+            <summary>
+            Number of seconds to expire the offline lease period
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.LeaseExpiryDate">
+            <summary>
+            Due date to expire the offline lease period
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.IsLeaseExpired">
+            <summary>
+            Whether the offline lease period expired or not
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.InstancesMaxAllowed">
+            <summary>
+            Maximum number of intences allowed per system
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.InstancesAvailable">
+            <summary>
+            Number of the instance, including the current instance, available
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.IsTrial">
+            <summary>
+            Whether the license type is trial or not
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.NoAnalytics">
+            <summary>
+            Whether the license allows to log the analytics or not based on TAA field "NoAnalytics"
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.DeviceId">
+            <summary>
+            Device id
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.FeatureSet">
+            <summary>
+            The set of the licensing features
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.InternetConnected">
+            <summary>
+            Whether the internet connected or not
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.IsFloatingLicense">
+            <summary>
+            Whether the license is floating type or not
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.GetAppAgilityFieldValue(System.String)">
+            <summary>
+            Returns the value of the required agility field
+            </summary>
+            <param name="fieldName">Name of the agility field</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.ApplyLicenseCode(System.String)">
+            <summary>
+            Applys the license code to activate
+            </summary>
+            <param name="licenseCode">license code</param>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.RefreshLicenseStatus(System.Boolean)">
+            <summary>
+            Refreshes the license status
+            </summary>
+            <param name="refreshFromServer"></param>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.RefreshLicenseDetails">
+            <summary>
+            Refreshes the details like license type, lease, expiry and etc.
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.OnDispose">
+            <summary>
+            Returns the network and floating licenses
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.TryDeleteLockFiles(System.Collections.Generic.List{System.String}@)">
+            <summary>
+            Delete the lock files
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.ReturnFloatingLicense">
+            <summary>
+            Check-in the floating features and the floating license. The license can be acquired whenever required without entering the license code again.
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.ReturnLicense">
+            <summary>
+            Return the license
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.DeactivateLicense">
+            <summary>
+            Deactivates the license i.e. return the license code to the server.
+            Once the license has been deactivated; new license code should be entered to activate again.
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.StartProtectionCheck(System.Version,Cads.Nalpeiron.DotNet.FeatureSet,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="appVersion"></param>
+            <param name="featureSet"></param>
+            <param name="allowAnalytics"></param>
+            <param name="appEdition"></param>
+            <param name="autoRefresh"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.StartProtectionCheck(System.Int32,System.String,System.String,System.Version,Cads.Nalpeiron.DotNet.FeatureSet,System.Boolean,System.String,System.Boolean)">
+            <summary>
+            Starts the protection check
+            </summary>
+            <param name="productCategoryId">Id of the Cads product for which the licensing will be checked</param>
+            <param name="integrationDllx86Path">Path of the integration dll for the x86 platform</param>
+            <param name="integrationDllx64Path">Path of the integration dll for the x86 platform</param>
+            <param name="appVersion">Version of the application</param>
+            <param name="featureSet">Feature of the application</param>
+            <param name="allowAnalytics">Alow to log the analytics</param>
+            <param name="appEdition">Edition of the application</param>
+            <param name="autoRefresh">Refresh the licensing automatically</param>
+            <returns>current protection check object</returns>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.StartProtectionCheck(System.Version,System.Collections.Generic.List{Cads.Nalpeiron.DotNet.FeatureSet},System.Boolean,System.String,System.Boolean)">
+            <summary>
+            Starts the protection check
+            </summary>
+            <param name="appVersion"></param>
+            <param name="featureSets"></param>
+            <param name="allowAnalytics"></param>
+            <param name="appEdition"></param>
+            <param name="autoRefresh"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.StartProtectionCheck(System.Int32,System.String,System.String,System.Version,System.Collections.Generic.List{Cads.Nalpeiron.DotNet.FeatureSet},System.Boolean,System.String,System.Boolean)">
+            <summary>
+            Starts the protection check
+            </summary>
+            <param name="productCategoryId">Id of the Cads product for which the licensing will be checked</param>
+            <param name="integrationDllx86Path">Path of the integration dll for the x86 platform</param>
+            <param name="integrationDllx64Path">Path of the integration dll for the x86 platform</param>
+            <param name="appVersion">Version of the application</param>
+            <param name="featureSets">list of features of the application</param>
+            <param name="allowAnalytics">Alow to log the analytics</param>
+            <param name="appEdition">Edition of the application</param>
+            <param name="autoRefresh">Refresh the licensing automatically</param>
+            <returns>current protection check object</returns>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.GetVmInfo(System.Boolean@,System.String@)">
+            <summary>
+            Returns the virtual machine information
+            </summary>
+            <param name="isVm">whether it is a virtual machine or not</param>
+            <param name="vmType">type of the virtual machine</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.Dispose">
+            <summary>
+            Returns the network and floating licenses and disposes the other objects
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProtectionCheck.IsRemoteSession">
+            <summary>
+            Determines whether the it is remote session (RDP) or not
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProtectionCheck.GetErrorMessage(System.Int32)">
+            <summary>
+            Return the error message specific to the given error code
+            </summary>
+            <param name="errorCode">code of the error</param>
+            <returns></returns>
+        </member>
+        <member name="T:Cads.Nalpeiron.DotNet.ProxyServerDetails">
+            <summary>
+            Details of the proxy server
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProxyServerDetails.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProxyServerDetails.Address">
+            <summary>
+            IP address of the proxy server
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProxyServerDetails.Port">
+            <summary>
+            Proxy server port
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProxyServerDetails.UserId">
+            <summary>
+            User id to logon to the proxy server
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProxyServerDetails.Password">
+            <summary>
+            Password to logon to the proxy server
+            </summary>
+        </member>
+        <member name="P:Cads.Nalpeiron.DotNet.ProxyServerDetails.UseProxyServer">
+            <summary>
+            Whether to use the proxy server or not
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProxyServerDetails.Get">
+            <summary>
+            Returns the details
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProxyServerDetails.Save">
+            <summary>
+            Stores the details
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.ProxyServerDetails.SerializeAsString">
+            <summary>
+            Serialized as a string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Cads.Nalpeiron.DotNet.Shafer">
+            <summary>
+            This is the class from Narpeiron samples.
+            To extend this call made into partial
+            Out code has been added in corresponding extention class(es) (i.e. partical class)
+            </summary>
+        </member>
+        <member name="T:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus">
+            <summary>
+            License Status
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdNetworkMaster">
+            <summary>
+            Network Master
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdNetworkLtco">
+            <summary>
+            Network LTCO Activated
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdNetwork">
+            <summary>
+            Network Activated
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdConcurrent">
+            <summary>
+            Concurrent Activated
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdInTrial">
+            <summary>
+            In Trial
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdAuthorized">
+            <summary>
+            Authorized
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdUndetermined">
+            <summary>
+            Undetermined
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdProdExpired">
+            <summary>
+            Product has expired
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdBtcounter">
+            <summary>
+            Backtime Counter Tripped
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdFaetureSwichedOff">
+            <summary>
+            Feature not Authorised
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdProdfeatNotFound">
+            <summary>
+            Feature/Product not Found
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdLicenseDoesNotVerify">
+            <summary>
+            Returned license to server
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdReturnedLicense">
+            <summary>
+            Returned license to server
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdDateSetBackTooFar">
+            <summary>
+            Date set back too far
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdInvalidState">
+            <summary>
+            Product in Invalid State
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdNoLicenses">
+            <summary>
+            No Available Licenses
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdDaemonVerifyFailure">
+            <summary>
+            Daemon Failed to Verify
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdDaemonSystemIdFailure">
+            <summary>
+            Daemon System ID Failure
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdProdInactive">
+            <summary>
+            Product is Inactive
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdInvalidTrial">
+            <summary>
+            Invalid Trial Period
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdComputerIdAlreadyActive">
+            <summary>
+            Computer Id has already been activated
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdTrialExpired">
+            <summary>
+            Product Trial Expired
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdLicCodeInactive">
+            <summary>
+            License code is inactive
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdNotAuthorized">
+            <summary>
+            Number of Allowed Activations Exceeded
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdSubscriptionExpired">
+            <summary>
+            Subscription Expired
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdDuplicateDevice">
+            <summary>
+            Duplicate Device ID
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdMissedHeartbeats">
+            <summary>
+            Too Many Heartbeats Missed (Network)
+            </summary>
+        </member>
+        <member name="F:Cads.Nalpeiron.DotNet.Shafer.LicenseStatus.ProdSeatRevoked">
+            <summary>
+            Seat Revoked By Daemon
+            </summary>
+        </member>
+        <member name="T:Cads.Nalpeiron.DotNet.Shafer.LicenseType">
+            <summary>
+            License Type
+            </summary>
+        </member>
+        <member name="T:Cads.Nalpeiron.DotNet.Shafer.ActivationType">
+            <summary>
+            Activation Type
+            </summary>
+        </member>
+        <member name="T:Cads.Nalpeiron.DotNet.Shafer.FeatureStatus">
+            <summary>
+            Feature Status
+            </summary>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.Shafer.Initialise(System.Int32,System.Int32,System.UInt32,System.UInt32,System.UInt32,System.String,System.Boolean@)">
+            <summary>
+            Initialise the license data
+            </summary>
+            <param name="nalpeironCustomerId">Company's (CADS) id of the Nalpeiron subscription</param>
+            <param name="productId">Company's product id of the Nalpeiron subscription</param>
+            <param name="secOffX">Security offset X</param>
+            <param name="secOffY">Security offset Y</param>
+            <param name="secOffZ">Security offset Z</param>
+            <param name="nalpeironCacheDir">Working and cache folder name </param>
+            <param name="badImageFormat">Tells whether the DLL is built for this platform or not </param>
+            <returns>License status</returns>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.Shafer.GetEnumDescrition(System.Enum)">
+            <summary>
+            returns the value of the description attribute
+            </summary>
+            <param name="en"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.Shafer.GetVmInfo(System.Boolean@,System.String@)">
+            <summary>
+            Returns the virtual machine information
+            </summary>
+            <param name="isVM">whether it is a virtual machine or not</param>
+            <param name="vmType">type of the virtual machine</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.Shafer.GetPoolInfo(System.String,System.UInt32@,System.UInt32@,System.Int32@)">
+            <summary>
+            Returns the pool information 
+            </summary>
+            <param name="Poolname">Name of the pool</param>
+            <param name="PoolMax">pool maximum</param>
+            <param name="PoolAmt">pool amount</param>
+            <param name="PoolStatus">pool status</param>
+            <returns></returns>
+        </member>
+        <member name="M:Cads.Nalpeiron.DotNet.Shafer.Dispose">
+            <inheritdoc />
+            <summary>
+            Dispose
+            </summary>
+        </member>
+    </members>
+</doc>
